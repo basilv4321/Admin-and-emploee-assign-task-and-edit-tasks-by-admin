@@ -1,0 +1,141 @@
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-10" style="align-items: center;">
+              
+                    <div class="log">
+                         
+                        <div class="card logcard rr">
+
+                            <form action="" [formGroup]="taskSubmitForm">
+                                <!-- <div class="logpad">
+                                <span class="p-float-label" >
+                                    <label for="float-input" style="color: #06867b;">username</label>
+                                    <input id="float-input" class="form-control"  formControlName="username" type="text" pInputText > 
+                                    
+                                </span>
+                                </div> -->
+                                <div class="logpad">
+                                    <span class="p-float-label" >
+                                        <label for="float-input" style="color: #06867b;">task</label>
+                                        <input id="float-input" class="form-control"  formControlName="task" type="text" pInputText > 
+                                        
+                                    </span>
+                                </div>
+                                <div class="logpad">
+                                    <span class="p-float-label" >
+                                        <label for="float-input" style="color: #06867b;">meetingTime</label>
+                                        <input id="float-input" class="form-control"  formControlName="meetingTime" type="date" pInputText > 
+                                        
+                                    </span>
+                                </div>
+                                <div class="logpad">
+                                    <span class="p-float-label" >
+                                        <label  style="color: #06867b;">task completed?</label>
+                                        <!-- <input id="float-input" class="form-control"  formControlName="meetingTime" type="date" pInputText >  -->
+                                        <mat-radio-group  aria-label="Select an option" formControlName="taskCompleted" name="taskCompleted">
+                                            <mat-radio-button value="completed">completed</mat-radio-button>
+                                            <mat-radio-button value="not completed">not completed</mat-radio-button>
+                                        </mat-radio-group>
+                                    </span>
+                                </div>
+                            </form>
+                            <div class="logpad">
+                                <span style="font-weight:bold">CLIENT:</span>
+                            </div>
+
+                            <!--  -->
+                            <div class="rr1">
+                                
+                               
+
+                                <form action=""  [formGroup]="clientRegistrationForm" >
+
+                                
+
+                                    <!--  -->
+                                    <div class="logpad">
+                                    <span class="p-float-label" >
+                                        <label for="float-input" style="color: #06867b;">client name</label>
+                                        <input id="float-input" class="form-control"  formControlName="clientName" type="text" pInputText > 
+                                        
+                                    </span>
+                                    </div>
+                                    <div class="logpad">
+                                        <span class="p-float-label" >
+                                            <label for="float-input" style="color: #06867b;">company name</label>
+                                            <input id="float-input" class="form-control"  formControlName="companyName" type="text" pInputText > 
+                                            
+                                        </span>
+                                    </div>
+                                    <div class="logpad">
+                                        <span class="p-float-label" >
+                                            <label for="float-input" style="color: #06867b;">trade code</label>
+                                            <input id="float-input" class="form-control"  formControlName="tradecode" type="text" pInputText > 
+                                            
+                                        </span>
+                                    </div>
+                                    <div class="logpad">
+                                        <span class="p-float-label" >
+                                            <label for="float-input" style="color: #06867b;">designation</label>
+                                            <input id="float-input" class="form-control"  formControlName="designation" type="text" pInputText > 
+                                            
+                                        </span>
+                                    </div>
+                                    <div class="logpad">
+                                        <span class="p-float-label" >
+                                            <label for="float-input" style="color: #06867b;">address</label>
+                                            <input id="float-input" class="form-control"  formControlName="address" type="text" pInputText > 
+                                           
+                                        </span>
+                                    </div>
+                                    <div class="logpad">
+                                        <span class="p-float-label" >
+                                            <label for="float-input" style="color: #06867b;">email</label>
+                                            <input id="float-input" class="form-control"  formControlName="email" type="text" pInputText > 
+                                            
+                                        </span>
+                                    </div>
+                                    <div class="logpad">
+                                        <span class="p-float-label" >
+                                            <label for="float-input" style="color: #06867b;">contact no</label>
+                                            <input id="float-input" class="form-control"  formControlName="phoneNo" type="number" pInputText > 
+                                            
+                                        </span>
+                                    </div>
+                                    <div class="logpad">
+                                        <span class="p-float-label" >
+                                            <label for="float-input" style="color: #06867b;">interest</label>
+                                            <input id="float-input" class="form-control"  formControlName="interest" type="text" pInputText > 
+                                           
+                                        </span>
+                                    </div>
+                                    
+                                    
+                                </form>
+
+                            </div>
+                            
+                            
+                            <div class="logbtn" *ngIf="editBoolean==false"  style="margin-bottom:0rem;" >
+                                <button (click)="registerNewClient()" class="btn logbtn1">ADD TASK</button>
+                            </div>
+                           
+                            <div class="logbtn" *ngIf="editBoolean" style="margin-bottom:1rem;">
+                                <button (click)="registerNewClient()" class="btn logbtn3">EDIT</button>
+                            </div>
+                            
+                            </div>
+                     </div>
+                     
+                    </div>
+                     
+                
+            </div>
+            <!--  -->
+
+           
+
+            <!--  -->
+        </div>
+  </main>

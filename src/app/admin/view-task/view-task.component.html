@@ -1,0 +1,78 @@
+<main>
+    <div class="container-fluid">
+        <!-- <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4" style="align-items: center;">
+                <div class="" style="padding-top: 5rem;">
+                    <button class="btn" style="background-color: #06867b; padding-inline: 13rem;" (click)="navigateToRegister()">ADD TASK</button>
+                </div>
+                <div class="" style="padding-top: 5rem;">
+                    <button class="btn" style="background-color: #06867b; padding-inline: 13rem;">EMPLOYEE LIST</button>
+                </div>
+            </div>
+            <div class="col-4"></div>
+        </div> -->
+        <div class="row">
+            <div class="col-12" style="align-items: center;">
+                
+                <div class="pt-5">
+                    <table class="table table-success table-striped">
+                        <thead>
+                            <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">username</th>
+                              <th scope="col">task</th>
+                              <th scope="col">meetingTime</th>
+                              <th scope="col">client</th>
+                              <th scope="col">task</th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let ne of tasks;let i=index">
+                              <th scope="row">{{i}}</th>
+                              <td>{{ne.username}}</td>
+                              <td>{{ne.task}}</td>
+                              <td>{{ne.meetingTime}}</td>
+                              <td>
+                                <div>
+                                    client name: {{ne.client.clientName}}
+                                </div>
+                                <div>
+                                    company name: {{ne.client.companyName}}
+                                </div>
+                                <div>
+                                    designation: {{ne.client.designation}}
+                                </div>
+                                <div>
+                                    address: {{ne.client.address}}
+                                </div>
+                                <div>
+                                    tradecode: {{ne.client.tradecode}}
+                                </div>
+                                <div>
+                                    email: {{ne.client.email}}
+                                </div>
+                                <div>
+                                    contact no: {{ne.client.phoneNo}}
+                                </div>
+                                <div>
+                                    interest: {{ne.client.interest}}
+                                </div>
+                            </td>
+                                <td>{{ne.taskCompleted}}</td>
+                                <td><button class="btn btn-danger" (click)="deleteTask(ne)">DELETE</button></td>
+                              <td><button class="btn btn-warning" (click)="edit(i)">EDIT</button></td>
+                              <td></td>
+                            </tr>
+                            
+                          </tbody>
+                      </table>
+                 </div>
+
+            </div>
+        </div>
+    </div>
+  </main>

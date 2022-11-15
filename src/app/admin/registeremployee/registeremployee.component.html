@@ -1,0 +1,84 @@
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-10" style="align-items: center;">
+              
+                    <div class="log">
+                         
+                        <div class="card logcard rr">
+                            <form action="" (ngSubmit)="registerNewEmploy()" [formGroup]="employRegisterForm">
+                                <div class="logpad">
+                                <span class="p-float-label" >
+                                    <input id="float-input" class="form-control"  formControlName="username" type="text" pInputText > 
+                                    <label for="float-input" style="color: #06867b;">Username</label>
+                                </span>
+                                </div>
+                                <div class="logpad">
+                                <span class="p-float-label">
+                                    <input id="float-input" class="form-control" formControlName="password"  type="password" pInputText  > 
+                                    <label for="float-input" style="color: #06867b;">Password</label>
+                                </span>
+                                </div>
+                                <div class="logpad">
+                                   <span class="p-float-label">
+                                       <input id="float-input" class="form-control" formControlName="email"  type="email" pInputText  > 
+                                       <label for="float-input" style="color: #06867b;">email</label>
+                                   </span>
+                                   </div>
+                                <div class="logbtn" *ngIf="editBoolean===false" style="margin-bottom:10rem;">
+                                    <button class="btn logbtn1">REGISTER</button>
+                                </div>
+                                <div class="logbtn" *ngIf="editBoolean" style="margin-bottom:10rem;">
+                                    <button class="btn btn-primary logbtn3">EDIT</button>
+                                </div>
+                                
+                            </form>
+                            
+                            </div>
+                     </div>
+
+
+                     <div class="pt-5">
+                        <table class="table table-success table-striped">
+                            <thead>
+                                <tr>
+                                  <th scope="col">#</th>
+                                  <th scope="col">username</th>
+                                  <th scope="col">password</th>
+                                  <th scope="col">email</th>
+                                  <th></th>
+                                  <th></th>
+                                  <th></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr *ngFor="let employee of registeredEmployees;let i=index">
+                                  <th scope="row">{{i}}</th>
+                                  <td>{{employee.username}}</td>
+                                  <td>{{employee.password}}</td>
+                                  <td>{{employee.email}}</td>
+                                  <td><button class="btn btn-danger" (click)="delete(i)">DELETE</button></td>
+                                  <td><button class="btn btn-warning" (click)="edit(i)">EDIT</button></td>
+                                  <td><button class="btn btn-warning" (click)="viewTasks(employee.username)">View Tasks</button></td>
+                                </tr>
+                                
+                              </tbody>
+                              <tbody *ngIf="registeredEmployees.length==0">
+                                <tr style="height: 40px;">
+                                  <td></td>
+                                  <td></td>
+                                  <td><span style="font-weight: bold;padding-left: 30px;">empty list</span></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                              </tbody>
+                          </table>
+                     </div>
+                     
+                    </div>
+                     
+                
+            </div>
+        </div>
+  </main>

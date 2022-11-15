@@ -1,0 +1,54 @@
+
+
+<div class="container-fluid">
+    <div class="col-12">
+
+        <nav class="navbar navbar-expand-lg bg-white">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#" class="a1"><img style="height: 5rem;width:13rem"  src="../../../assets/Screenshot (9).png" alt=""></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </nav>
+
+          <main>
+            <div class="log ">
+               <div class="card logcard rr">
+                <form action="" (ngSubmit)="login()" [formGroup]="loginForm">
+                    <div class="logpad">
+                    <span class="p-float-label" >
+                        <input id="float-input" class="form-control"  formControlName="username" type="text" pInputText > 
+                        <label for="float-input" style="color: #06867b;">Username</label>
+                    </span>
+                    </div>
+                    <div class="logpad">
+                    <span class="p-float-label">
+                        <input id="float-input" class="form-control" formControlName="password"  type="password" pInputText  > 
+                        <label for="float-input" style="color: #06867b;">Password</label>
+                    </span>
+                    </div>
+                    <div class="border border-3 captchabox">
+                        {{captcha}}
+                    </div>
+                    <div class="captchabox1">
+                        <span class="p-float-label captchabox2">
+                            <input id="float-input" type="text" pInputText  formControlName="captcha" style="width: 7rem;height: 2rem;font-size: 15px;"> 
+                            <label for="float-input" style="color: #06867b;">Captcha</label>
+                        </span>
+                    </div>
+
+                    <div class="logbtn">
+                        <button class="btn logbtn1">LOGIN</button>
+                    </div>
+                    
+                </form>
+                
+                </div> 
+
+            </div>
+            
+          </main>
+
+    </div>
+</div>

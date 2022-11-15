@@ -1,0 +1,36 @@
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-10" style="align-items: center;">
+              
+                    <div class="log">
+                         
+                        <div class="card logcard rr">
+                            <form action="" (ngSubmit)="change()" [formGroup]="profileForm">
+                                <div class="logpad">
+                                <span class="p-float-label" >
+                                    <!-- <input id="float-input" class="form-control" type="text" pInputText > 
+                                    <label for="float-input" style="color: #06867b;">Username</label> -->
+                                    username: &nbsp;&nbsp;&nbsp;&nbsp; <span class="fw-bold">{{username}}</span>
+                                </span>
+                                </div>
+                                <div class="logpad">
+                                <span class="p-float-label">
+                                    <input id="float-input" class="form-control" formControlName="password"  type="password" pInputText > 
+                                    <label for="float-input" style="color: #06867b;">Password</label>
+                                </span>
+                                </div>
+                                
+                                <div class="logbtn" style="margin-bottom:10rem;">
+                                    <button class="btn logbtn1">CHANGE PASSWORD</button>
+                                </div>
+                               
+                                
+                            </form>
+                            
+                            </div>
+                     </div>
+                    </div>
+            </div>
+        </div>
+  </main>
